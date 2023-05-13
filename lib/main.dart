@@ -13,6 +13,6 @@ class App extends StatelessWidget {
     return MaterialApp(routes: {
       '/login': (context) => const Login(),
       '/cadastro': (context) => Cadastro()
-    }, initialRoute: '/cadastro');
+    }, initialRoute: '/login');
   }
 }
