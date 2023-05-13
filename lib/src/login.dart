@@ -5,9 +5,11 @@ void main() {
   runApp(Login());
 }
 
-class Login extends StatelessWidget {
-  const Login({super.key});
-  @override
+class Login extends StatefulWidget {
+  _Login createState() => _Login();
+}
+
+class _Login extends State<Login> {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -39,7 +41,7 @@ class Login extends StatelessWidget {
                   onPressed: () {
                     // Ação do botão de login
                   },
-                  child: Text('Login'),
+                  child: Text('Logar'),
                 ),
                 SizedBox(height: 24.0),
                 Text("ou"),
@@ -49,7 +51,7 @@ class Login extends StatelessWidget {
                     Navigator.pushNamed(
                         context, '/cadastro'); // Ação do botão de login
                   },
-                  child: Text('Cadastro'),
+                  child: Text('Cadastrar'),
                 ),
               ],
             ),
