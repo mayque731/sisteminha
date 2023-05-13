@@ -3,7 +3,7 @@ import 'src/cadastro.dart';
 import 'src/login.dart';
 
 void main() {
-  runApp(App());
+  runApp(const App());
 }
 
 class App extends StatelessWidget {
