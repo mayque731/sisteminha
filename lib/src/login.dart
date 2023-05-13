@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sisteminha/src/cadastro.dart';
+import './cadastro.dart';
 
 void main() {
   runApp(Login());
