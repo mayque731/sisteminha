@@ -12,7 +12,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(routes: {
       '/login': (context) => const Login(),
-      '/cadastro': (context) => const Cadastro()
-    });
+      '/cadastro': (context) => Cadastro()
+    }, initialRoute: '/cadastro');
   }
 }
