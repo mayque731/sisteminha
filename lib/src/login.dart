@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Home());
+  runApp(Login());
 }
 
-class Home extends StatelessWidget {
-  const Home({super.key});
+class Login extends StatelessWidget {
+  const Login({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(routes: {'/home': (context) => const Home()});
+    return MaterialApp(routes: {'/home': (context) => const Login()});
   }
 }
