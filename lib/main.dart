@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'src/home.dart';
+import 'package:sisteminha/src/cadastro.dart';
+import 'src/login.dart';
 
 void main() {
   runApp(App());
@@ -9,6 +10,9 @@ class App extends StatelessWidget {
   const App({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(routes: {'/home': (context) => const Home()});
+    return MaterialApp(routes: {
+      '/login': (context) => const Login(),
+      '/cadastro': (context) => const Cadastro()
+    });
   }
 }
