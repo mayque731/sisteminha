@@ -10,8 +10,12 @@ class Cadastro extends StatefulWidget {
 
 class _Cadastro extends State<Cadastro> {
   Widget build(BuildContext context) {
-    TextEditingController _controller = new TextEditingController();
-    var tamanhosenha = _controller.value.text.length;
+    //TextEditingController _controller = new TextEditingController();
+    var nomeController = TextEditingController();
+    var senhaController = TextEditingController();
+    var emailController = TextEditingController();
+    var tamanhosenha = senhaController.text.length;
+
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(brightness: Brightness.dark),
@@ -43,11 +47,16 @@ class _Cadastro extends State<Cadastro> {
                   ),
                 ),
                 SizedBox(height: 16.0),
-                TextField(
-                  controller: _controller,
+                TextFormField(
+                  controller: senhaController,
                   decoration: InputDecoration(
                     labelText: 'Senha',
                   ),
+                  validator: (value) {
+                    if (value!.length > 4) {
+                      return 'senha fraca';
+                    }
+                  },
                   obscureText: true,
                 ),
                 SizedBox(height: 24.0),
@@ -60,7 +69,6 @@ class _Cadastro extends State<Cadastro> {
 
                     if (tamanhosenha < 8) {
                       ScaffoldMessenger.of(context).showSnackBar(aviso);
-                      return;
                     }
                   },
                   child: Text('Cadastrar'),
