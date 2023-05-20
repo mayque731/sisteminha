@@ -39,8 +39,8 @@ class _Login extends State<Login> {
                   validator: (value) {
                     if (value!.isEmpty) {
                       return 'Informe um nome';
-                    } else if (value == 'kassio' || value == 'mayque') {
-                      return value;
+                    } else if (value != 'kassio' && value != 'mayque') {
+                      return 'usuario incorreto';
                     }
                     return null;
                   },
@@ -54,8 +54,8 @@ class _Login extends State<Login> {
                   validator: (value) {
                     if (value!.isEmpty) {
                       return 'Informe uma senha';
-                    } else if (value == 'senha123') {
-                      return value;
+                    } else if (value != 'senha123') {
+                      return 'senha incorreta';
                     }
                     return null;
                   },
